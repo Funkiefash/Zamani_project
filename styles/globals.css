@@ -123,4 +123,9 @@
     @apply bg-background text-foreground;
     overflow-x: hidden; /* Hides horizontal scrollbar */
   }
+  html {
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+  width: 100%; 
+  height: 100%; 
+  }
 }
