@@ -16,7 +16,7 @@ export default function About() {
       isImage: true,
     },
     {
-      icon: "/values-icon.jpg",
+      icon: "/values.jpg",
       title: "Core Values",
       list: ["Integrity", "Excellence", "Client-Focused"],
       isImage: true,
