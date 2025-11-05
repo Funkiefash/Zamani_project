@@ -122,6 +122,5 @@
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden; /* Hides horizontal scrollbar */
-  overflow-y: hidden; /* Hides vertical scrollbar */
   }
 }
