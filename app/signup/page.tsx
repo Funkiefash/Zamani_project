@@ -50,7 +50,7 @@ export default function SignupPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gray-900 py-8 md:py-16 px-3 md:px-4">
+      <main className="min-h-screen bg-dark-green py-8 md:py-16 px-3 md:px-4">
         <div className="max-w-md mx-auto">
           {step === 1 && (
             <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
