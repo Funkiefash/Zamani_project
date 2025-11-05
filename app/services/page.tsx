@@ -1,37 +1,38 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
 export default function ServicesPage() {
   const services = [
     {
       title: "Investment Portfolios",
       description: "Diversified investment options tailored to your goals and risk profile",
-      icon: "📈",
+      image: "/service-investment.jpg",
     },
     {
       title: "Wealth Management",
       description: "Expert guidance for comprehensive wealth planning and asset growth",
-      icon: "💎",
+      image: "/service-wealth.jpg",
     },
     {
       title: "Savings Plans",
       description: "Secure savings programs with competitive returns and flexible terms",
-      icon: "🏦",
+      image: "/service-savings.jpg",
     },
     {
       title: "Financial Advisory",
       description: "Personalized financial strategies designed for your future success",
-      icon: "🎯",
+      image: "/service-advisory.jpg",
     },
     {
       title: "Business Loans",
       description: "Quick and flexible loan solutions for entrepreneurs and businesses",
-      icon: "💼",
+      image: "/service-loans.jpg",
     },
     {
       title: "Personal Finance",
       description: "Comprehensive solutions for personal financial management and growth",
-      icon: "👤",
+      image: "/service-personal.jpg",
     },
   ]
 
@@ -54,14 +55,23 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-lg shadow hover:shadow-xl transition border-l-4 border-[#c4ff00] group cursor-pointer"
+                className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg shadow hover:shadow-xl transition border-l-4 border-[#c4ff00] group cursor-pointer overflow-hidden"
               >
-                <div className="text-6xl mb-4 group-hover:scale-110 transition transform">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-[#0a2e1a] mb-3">{service.title}</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
-                <button className="text-[#c4ff00] font-bold hover:text-[#0a2e1a] flex items-center gap-2 transition">
-                  Learn More →
-                </button>
+                <div className="relative h-48 w-full bg-gray-200 overflow-hidden">
+                  <Image
+                    src={service.image || "/placeholder.svg"}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition transform duration-300"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-[#0a2e1a] mb-3">{service.title}</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
+                  <button className="text-[#c4ff00] font-bold hover:text-[#0a2e1a] flex items-center gap-2 transition">
+                    Learn More →
+                  </button>
+                </div>
               </div>
             ))}
           </div>

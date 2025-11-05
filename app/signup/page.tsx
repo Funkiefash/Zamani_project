@@ -50,52 +50,52 @@ export default function SignupPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gray-900 py-16 px-4">
+      <main className="min-h-screen bg-gray-900 py-8 md:py-16 px-3 md:px-4">
         <div className="max-w-md mx-auto">
           {step === 1 && (
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">Welcome to Zamani</h2>
-              <p className="text-gray-500 text-sm mb-6">Join millions of investors today</p>
+            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">Welcome to Zamani</h2>
+              <p className="text-gray-500 text-xs md:text-sm mb-6">Join millions of investors today</p>
 
               <form onSubmit={handleStepOne} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
                     type="text"
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-sm"
+                    className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-xs md:text-sm"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-2">Email Address</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-sm"
+                    className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-xs md:text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition text-sm"
+                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition text-xs md:text-sm"
                 >
                   Create Account
                 </button>
 
                 <button
                   type="button"
-                  className="w-full border border-gray-300 text-gray-900 font-semibold py-2 rounded hover:bg-gray-50 transition text-sm flex items-center justify-center gap-2"
+                  className="w-full border border-gray-300 text-gray-900 font-semibold py-2 rounded hover:bg-gray-50 transition text-xs md:text-sm flex items-center justify-center gap-2"
                 >
-                  <img src="/google-icon.png" alt="Google" className="w-5 h-5" />
+                  <img src="/google-icon.png" alt="Google" className="w-4 h-4 md:w-5 md:h-5" />
                   Register with Google
                 </button>
 
@@ -110,14 +110,14 @@ export default function SignupPage() {
           )}
 
           {step === 2 && (
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">Email Verification</h2>
-              <p className="text-gray-500 text-sm mb-6">Enter the 6-digit code sent to {formData.email}</p>
+            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">Email Verification</h2>
+              <p className="text-gray-500 text-xs md:text-sm mb-6">Enter the 6-digit code sent to {formData.email}</p>
 
               <form onSubmit={handleStepTwo} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Verification Code</label>
-                  <div className="flex gap-2 justify-between">
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-2">Verification Code</label>
+                  <div className="flex gap-1 md:gap-2 justify-between">
                     {[0, 1, 2, 3, 4, 5].map((index) => (
                       <input
                         key={index}
@@ -139,7 +139,7 @@ export default function SignupPage() {
                           }
                         }}
                         data-index={index}
-                        className="w-10 h-10 border border-gray-300 rounded text-center font-bold focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none"
+                        className="w-8 h-8 md:w-10 md:h-10 border border-gray-300 rounded text-center font-bold text-sm md:text-base focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none"
                       />
                     ))}
                   </div>
@@ -152,7 +152,7 @@ export default function SignupPage() {
                 <button
                   type="submit"
                   disabled={formData.verificationCode.length !== 6}
-                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition disabled:opacity-50 disabled:cursor-not-allowed text-xs md:text-sm"
                 >
                   Verify Email
                 </button>
@@ -168,20 +168,20 @@ export default function SignupPage() {
           )}
 
           {step === 3 && (
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">Create Password</h2>
-              <p className="text-gray-500 text-sm mb-6">Set a strong password for your account</p>
+            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">Create Password</h2>
+              <p className="text-gray-500 text-xs md:text-sm mb-6">Set a strong password for your account</p>
 
               <form onSubmit={handleStepThree} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-2">Password</label>
                   <input
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-sm"
+                    className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#c4ff00] focus:border-transparent outline-none text-xs md:text-sm"
                     placeholder="••••••••"
                   />
                   <p className="text-xs text-gray-500 mt-2">Minimum 8 characters required</p>
@@ -194,7 +194,7 @@ export default function SignupPage() {
                 <button
                   type="submit"
                   disabled={formData.password.length < 8}
-                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  className="w-full bg-[#c4ff00] text-gray-900 font-bold py-2 rounded hover:bg-[#b3ff00] transition disabled:opacity-50 disabled:cursor-not-allowed text-xs md:text-sm"
                 >
                   Continue
                 </button>
@@ -203,11 +203,11 @@ export default function SignupPage() {
           )}
 
           {step === 4 && (
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
               <div className="text-center">
-                <div className="mb-4 text-5xl">✓</div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Email Verification Successful</h2>
-                <p className="text-gray-500 text-sm mb-8">
+                <div className="mb-4 text-4xl md:text-5xl">✓</div>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Email Verification Successful</h2>
+                <p className="text-gray-500 text-xs md:text-sm mb-8">
                   Your account has been created successfully. Welcome to Zamani Capital!
                 </p>
 
@@ -217,7 +217,7 @@ export default function SignupPage() {
 
                 <Link
                   href="/"
-                  className="inline-block bg-[#c4ff00] text-gray-900 font-bold px-8 py-2 rounded hover:bg-[#b3ff00] transition text-sm"
+                  className="inline-block bg-[#c4ff00] text-gray-900 font-bold px-6 md:px-8 py-2 rounded hover:bg-[#b3ff00] transition text-xs md:text-sm"
                 >
                   Go to Dashboard
                 </Link>

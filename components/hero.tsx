@@ -50,17 +50,17 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-balance leading-tight">
           Grow Your Wealth <span className="text-[#c4ff00]">With Zamani</span>
         </h1>
 
-        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto text-pretty">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 max-w-2xl mx-auto text-pretty">
           Discover innovative investment solutions designed to build your financial future and secure generational
           wealth.
         </p>
 
-        <button className="bg-[#c4ff00] text-[#0a2e1a] px-8 py-3 font-bold text-lg hover:bg-opacity-90 transition">
+        <button className="bg-[#c4ff00] text-[#0a2e1a] px-6 md:px-8 py-2 md:py-3 font-bold text-base md:text-lg hover:bg-opacity-90 transition">
           GET STARTED
         </button>
       </div>
@@ -68,10 +68,10 @@ export default function Hero() {
       {/* Previous Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-[#c4ff00] hover:bg-[#b8ff00] text-[#0a2e1a] p-3 rounded-full transition"
+        className="absolute left-2 md:left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 bg-[#c4ff00] hover:bg-[#b8ff00] text-[#0a2e1a] p-2 md:p-3 rounded-full transition"
         aria-label="Previous slide"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -79,16 +79,16 @@ export default function Hero() {
       {/* Next Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-[#c4ff00] hover:bg-[#b8ff00] text-[#0a2e1a] p-3 rounded-full transition"
+        className="absolute right-2 md:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-[#c4ff00] hover:bg-[#b8ff00] text-[#0a2e1a] p-2 md:p-3 rounded-full transition"
         aria-label="Next slide"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}

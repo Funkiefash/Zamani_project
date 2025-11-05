@@ -2,12 +2,12 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a2e1a] text-white">
       {/* Main footer content */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-6xl mx-auto px-4 py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 mb-8 md:mb-12">
           {/* About */}
           <div>
-            <h4 className="font-bold text-[#c4ff00] mb-4">About Zamani</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-bold text-[#c4ff00] mb-3 md:mb-4 text-sm md:text-base">About Zamani</h4>
+            <ul className="space-y-2 text-gray-300 text-xs md:text-sm">
               <li>
                 <a href="#" className="hover:text-[#c4ff00] transition">
                   Our Team
@@ -28,8 +28,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold text-[#c4ff00] mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-bold text-[#c4ff00] mb-3 md:mb-4 text-sm md:text-base">Services</h4>
+            <ul className="space-y-2 text-gray-300 text-xs md:text-sm">
               <li>
                 <a href="#" className="hover:text-[#c4ff00] transition">
                   Investments
@@ -50,8 +50,8 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="font-bold text-[#c4ff00] mb-4">Support</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-bold text-[#c4ff00] mb-3 md:mb-4 text-sm md:text-base">Support</h4>
+            <ul className="space-y-2 text-gray-300 text-xs md:text-sm">
               <li>
                 <a href="#" className="hover:text-[#c4ff00] transition">
                   Contact Us
@@ -72,8 +72,8 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold text-[#c4ff00] mb-4">Legal</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-bold text-[#c4ff00] mb-3 md:mb-4 text-sm md:text-base">Legal</h4>
+            <ul className="space-y-2 text-gray-300 text-xs md:text-sm">
               <li>
                 <a href="#" className="hover:text-[#c4ff00] transition">
                   Privacy Policy
@@ -94,23 +94,25 @@ export default function Footer() {
         </div>
 
         {/* Social & Copyright */}
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-700 pt-6 md:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex gap-6">
-              <a href="https://www.facebook.com/" className="hover:opacity-80 transition" title="Facebook">
-                <img src="/facebook-icon.jpg" alt="Facebook" className="w-6 h-6" />
+            <div className="flex gap-4 md:gap-6">
+              <a href="#" className="hover:opacity-80 transition" title="Facebook">
+                <img src="/facebook-icon.jpg" alt="Facebook" className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://www.instagram.com/" className="hover:opacity-80 transition" title="Instagram">
-                <img src="/instagram-icon.jpeg" alt="Instagram" className="w-6 h-6" />
+              <a href="#" className="hover:opacity-80 transition" title="Instagram">
+                <img src="/instagram-icon.jpeg" alt="Instagram" className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://www.twitter.com" className="hover:opacity-80 transition" title="Twitter">
-                <img src="/twitter-icon.webp" alt="Twitter" className="w-6 h-6" />
+              <a href="#" className="hover:opacity-80 transition" title="Twitter">
+                <img src="/twitter-icon.webp" alt="Twitter" className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://www.linkedin.com" className="hover:opacity-80 transition" title="LinkedIn">
-                <img src="/linkedin-icon.jpg" alt="LinkedIn" className="w-6 h-6" />
+              <a href="#" className="hover:opacity-80 transition" title="LinkedIn">
+                <img src="/linkedin-icon.jpg" alt="LinkedIn" className="w-5 h-5 md:w-6 md:h-6" />
               </a>
             </div>
-            <p className="text-gray-400">© 2025 Zamani Capital. All rights reserved.</p>
+            <p className="text-gray-400 text-xs md:text-sm text-center md:text-right">
+              © 2025 Zamani Capital. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

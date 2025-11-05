@@ -15,35 +15,35 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200">
       {/* Top bar */}
-      <div className="bg-gray-100 px-4 py-2 text-sm text-gray-600 flex justify-between items-center">
-        <div className="flex gap-6">
+      <div className="bg-gray-100 px-4 py-2 text-xs md:text-sm text-gray-600 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-6 w-full md:w-auto">
           <a href="#" className="hover:text-[#0a2e1a] transition">
             Ways To Connect With Us
           </a>
-          <span className="text-gray-400">|</span>
+          <span className="text-gray-400 hidden md:inline">|</span>
           <a href="#" className="hover:text-[#0a2e1a] transition">
             Find A Branch Near You
           </a>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-full md:w-auto">
           <input
             type="search"
             placeholder="Search ..."
-            className="bg-white px-3 py-1 rounded border border-gray-300 text-sm"
+            className="bg-white px-3 py-1 rounded border border-gray-300 text-xs md:text-sm flex-1 md:flex-none"
           />
           <button className="text-gray-600">🔍</button>
         </div>
       </div>
 
       {/* Main navigation */}
-      <div className="px-4 py-4 flex items-center justify-between max-w-7xl mx-auto">
+      <div className="px-4 py-3 md:py-4 flex items-center justify-between max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo-zamani.jpg"
             alt="Zamani Capital Logo"
             width={180}
             height={80}
-            className="h-16 w-auto"
+            className="h-12 md:h-16 w-auto"
             priority
           />
         </Link>
@@ -154,7 +154,7 @@ export default function Header() {
           {/* Get Started button */}
           <Link
             href="/signup"
-            className="ml-4 bg-[#c4ff00] text-[#0a2e1a] font-bold px-6 py-2 rounded hover:bg-[#b3ff00] transition"
+            className="ml-4 bg-[#c4ff00] text-[#0a2e1a] font-bold px-6 py-2 rounded hover:bg-[#b3ff00] transition whitespace-nowrap"
           >
             Get Started
           </Link>
@@ -163,7 +163,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="md:hidden border-t border-gray-200 px-4 py-4 flex flex-col gap-4 bg-gray-50">
+        <nav className="md:hidden border-t border-gray-200 px-4 py-3 flex flex-col gap-3 bg-gray-50 max-h-96 overflow-y-auto">
           {/* About Us Mobile Dropdown */}
           <div>
             <button
@@ -285,7 +285,7 @@ export default function Header() {
           {/* Get Started button for mobile */}
           <Link
             href="/signup"
-            className="bg-[#c4ff00] text-[#0a2e1a] font-bold px-6 py-2 rounded hover:bg-[#b3ff00] transition text-center"
+            className="bg-[#c4ff00] text-[#0a2e1a] font-bold px-6 py-2 rounded hover:bg-[#b3ff00] transition text-center text-sm"
           >
             Get Started
           </Link>
